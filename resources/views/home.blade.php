@@ -24,7 +24,10 @@
         .todos {
             display: flex;
             flex-direction: column;
+            align-items: center;
+
             gap: 1rem;
+            width: 100%;
         }
 
         .todo {
@@ -34,6 +37,8 @@
 
             border-radius: 1rem;
             padding: 1rem;
+
+            width: 100%;
             max-width: 400px;
 
             box-shadow: #00000059 0px 5px 15px;
@@ -53,6 +58,7 @@
         .todo>form {
             display: flex;
             justify-content: flex-end;
+            align-items: center;
             gap: 0.5rem;
         }
     </style>
@@ -74,7 +80,7 @@
                     </div>
                     <form method="POST" action="/todo/{{ $todo->id }}">
                         @csrf
-                        <button>Edit</button>
+                        <a href="/edit-todo/{{ $todo->id }}">Edit</a>
                         <button type="submit">Done!</button>
                     </form>
                 </article>

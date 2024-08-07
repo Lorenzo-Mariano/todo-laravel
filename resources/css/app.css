@@ -1,10 +1,26 @@
-@import url(https://fonts.bunny.net/css?family=figtree:400,800);
+@import url(https://fonts.bunny.net/css?family=figtree:400,600,800);
 
 * {
   margin: 0;
   padding: 0;
 
   font-family: 'Figtree', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(#f9322c 1.35px, #ffffff 1.35px);
+  background-size: 27px 27px;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+a:hover {
+  font-weight: 600;
 }
 
 input,
@@ -19,8 +35,14 @@ button {
   all: unset;
   cursor: pointer;
   padding: 0.25rem;
-  border: 1px solid black;
   border-radius: 0.5rem;
+  background-color: #ff574e;
+  color: #fff;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #ff574ebb;
 }
 
 .red {

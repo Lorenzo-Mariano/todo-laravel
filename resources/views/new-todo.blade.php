@@ -27,6 +27,7 @@
                 width: 100%;
                 max-width: 450px;
 
+                background-color: #fff;
                 box-shadow: #00000059 0px 5px 15px;
             }
 
@@ -38,17 +39,22 @@
 
             textarea {
                 resize: vertical;
+                min-height: 200px;
             }
         </style>
     </head>
 
     <body>
+        {{-- TODO --}}
+        {{-- Make migration, create table --}}
+        {{-- Make Controller to CRUD todo's --}}
+        {{-- Make Model to CRUD todo's --}}
         <form action="">
             <h2 class="red">New Todo</h2>
             <label for="title">Title</label>
-            <input type="text">
+            <input type="text" name="title">
 
-            <label for="description"></label>
+            <label for="description">Description</label>
             <textarea name="description"></textarea>
 
             <section>

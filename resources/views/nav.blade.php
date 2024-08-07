@@ -11,6 +11,7 @@
 </style>
 
 <nav class="main-nav">
+    <a href="{{ url('/') }}">Home</a>
     <a href="{{ url('new-todo') }}">New Todo</a>
-    <a href="{{ url('finished-todo') }}">Show Finished Todo's</a>
+    <a href="{{ url('finished-todos') }}">Show Finished Todo's</a>
 </nav>

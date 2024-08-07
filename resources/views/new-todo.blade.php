@@ -9,10 +9,12 @@
         <style>
             body {
                 display: flex;
+                flex-direction: column;
                 height: 100vh;
 
                 justify-content: center;
                 align-items: center;
+                gap: 1rem;
             }
 
             form {
@@ -45,10 +47,6 @@
     </head>
 
     <body>
-        {{-- TODO --}}
-        {{-- Make migration, create table --}}
-        {{-- Make Controller to CRUD todo's --}}
-        {{-- Make Model to CRUD todo's --}}
         @include('nav')
         <form action="">
             <h2 class="red">New Todo</h2>

@@ -5,7 +5,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
+    <title>Finished Todos</title>
 
     <style>
         main {
@@ -66,17 +66,12 @@
                 <article id="{{ $todo->id }}" class="todo">
                     <div class="todo-content">
                         <label class="title">
-                            {{ $todo->title }}
+                            {{ $todo->title }} ({{ $todo->is_done }})
                         </label>
                         <p class="description">
                             {{ $todo->description }}
                         </p>
                     </div>
-                    <form method="POST" action="/todo/{{ $todo->id }}">
-                        @csrf
-                        <button>Edit</button>
-                        <button type="submit">Done!</button>
-                    </form>
                 </article>
             @endforeach
             {{ $todos->links() }}

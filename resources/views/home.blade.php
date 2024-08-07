@@ -12,6 +12,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            gap: 1rem;
             padding: 1rem;
         }
 
@@ -19,12 +21,11 @@
             margin-bottom: 1rem;
         }
 
+        /* .main-nav { */
         nav {
             display: flex;
             gap: 0.5rem;
             padding: 0.5rem;
-
-            margin-bottom: 3rem;
             border-radius: 3rem;
 
             background-color: #fff;
@@ -70,11 +71,10 @@
 
 <body>
     <main>
-        <nav>
+        <nav class="main-nav">
             <a href="{{ url('new-todo') }}">New Todo</a>
             <a href="{{ url('new-todo') }}">Show Finished Todo's</a>
         </nav>
-
         <section class="todos">
             @foreach ($todos as $todo)
                 <article id="{{ $todo->id }}" class="todo">
@@ -93,6 +93,7 @@
                 </article>
             @endforeach
         </section>
+        {{ $todos->links() }}
     </main>
 </body>
 

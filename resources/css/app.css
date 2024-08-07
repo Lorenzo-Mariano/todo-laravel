@@ -20,7 +20,7 @@ a {
 }
 
 a:hover {
-  font-weight: 600;
+  color: #f9322c;
 }
 
 input,
@@ -47,4 +47,15 @@ button:hover {
 
 .red {
   color: #f9322c
+}
+
+.pagination-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.pagination>a,
+.pagination>span {
+  cursor: pointer;
 }

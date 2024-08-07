@@ -48,7 +48,8 @@
 
     <body>
         @include('nav')
-        <form action="">
+        <form method="POST" action="/new-todo">
+            @csrf
             <h2 class="red">New Todo</h2>
             <label for="title">Title</label>
             <input type="text" name="title">

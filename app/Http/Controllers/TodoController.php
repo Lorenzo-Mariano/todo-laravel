@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Todo;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -33,8 +34,42 @@ class TodoController extends Controller
         );
     }
 
-    public function newTodo()
+    public function newTodo(Request $request)
     {
+        $validatedTodo = $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string'
+        ]);
+
+        if ($validatedTodo) {
+            DB::table('todos')->insert([
+                'title' => $validatedTodo['title'],
+                'description' => $validatedTodo['description'],
+                'is_done' => 0,
+                'finished_on' => null
+            ]);
+        }
+
+        return redirect('/');
+    }
+
+    public function editTodo(Request $request, $id)
+    {
+        $validatedTodo = $request->validate([
+            'title' => 'required|string',
+            'description' => 'required|string'
+        ]);
+
+        if ($validatedTodo) {
+            DB::table('todos')
+                ->where('id', '=', $id)
+                ->update([
+                    'title' => $validatedTodo['title'],
+                    'description' => $validatedTodo['description'],
+                ]);
+        }
+
+        return redirect('/');
     }
 
     public function finishTodo(string $id)

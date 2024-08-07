@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class TodoController extends Controller
 {
-    public function showPage()
+    public function getTodos()
     {
         return view('home', [
             'todos' => DB::table('todos')
@@ -19,7 +19,7 @@ class TodoController extends Controller
         ]);
     }
 
-    public function showPageFinished()
+    public function getFinishedTodos()
     {
         return view(
             'finished-todos',
@@ -31,6 +31,10 @@ class TodoController extends Controller
                     ->paginate(5)
             ]
         );
+    }
+
+    public function newTodo()
+    {
     }
 
     public function finishTodo(string $id)

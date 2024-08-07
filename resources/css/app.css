@@ -49,13 +49,3 @@ button:hover {
   color: #f9322c
 }
 
-.pagination-nav {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.pagination>a,
-.pagination>span {
-  cursor: pointer;
-}

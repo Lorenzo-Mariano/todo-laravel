@@ -49,6 +49,7 @@
         {{-- Make migration, create table --}}
         {{-- Make Controller to CRUD todo's --}}
         {{-- Make Model to CRUD todo's --}}
+        @include('nav')
         <form action="">
             <h2 class="red">New Todo</h2>
             <label for="title">Title</label>

@@ -1,3 +1,25 @@
+<style>
+    nav {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 3rem;
+
+        background-color: #fff;
+        box-shadow: #00000059 0px 5px 15px;
+    }
+
+    .pagination-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pagination>a,
+    .pagination>span {
+        cursor: pointer;
+    }
+</style>
+
 @if ($paginator->hasPages())
     <nav class="pagination-nav">
         <span class="results">

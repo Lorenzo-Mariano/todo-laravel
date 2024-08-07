@@ -66,7 +66,7 @@
                 <article id="{{ $todo->id }}" class="todo">
                     <div class="todo-content">
                         <label class="title">
-                            {{ $todo->title }} ({{ $todo->is_done }})
+                            {{ $todo->title }}
                         </label>
                         <p class="description">
                             {{ $todo->description }}

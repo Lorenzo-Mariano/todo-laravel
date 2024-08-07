@@ -1,0 +1,28 @@
+@import url(https://fonts.bunny.net/css?family=figtree:400,800);
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Figtree', sans-serif;
+}
+
+input,
+textarea {
+  all: unset;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 0.25rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+}
+
+.red {
+  color: #f9322c
+}

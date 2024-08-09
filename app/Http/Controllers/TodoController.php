@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Todo;
-use Illuminate\View\View;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -50,7 +48,7 @@ class TodoController extends Controller
             ]);
         }
 
-        return redirect('/');
+        return redirect()->back()->with('success', true);
     }
 
     public function editTodo(Request $request, $id)

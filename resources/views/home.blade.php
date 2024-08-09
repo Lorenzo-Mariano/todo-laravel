@@ -68,23 +68,28 @@
     <main>
         @include('nav')
         <section class="todos">
-            @foreach ($todos as $todo)
-                <article id="{{ $todo->id }}" class="todo">
-                    <div class="todo-content">
-                        <label class="title">
-                            {{ $todo->title }}
-                        </label>
-                        <p class="description">
-                            {{ $todo->description }}
-                        </p>
-                    </div>
-                    <form method="POST" action="/todo/{{ $todo->id }}">
-                        @csrf
-                        <a href="/edit-todo/{{ $todo->id }}">Edit</a>
-                        <button type="submit">Done!</button>
-                    </form>
-                </article>
-            @endforeach
+            @if (count($todos)))
+                @foreach ($todos as $todo)
+                    <article id="{{ $todo->id }}" class="todo">
+                        <div class="todo-content">
+                            <label class="title">
+                                {{ $todo->title }}
+                            </label>
+                            <p class="description">
+                                {{ $todo->description }}
+                            </p>
+                        </div>
+                        <form method="POST" action="/todo/{{ $todo->id }}">
+                            @csrf
+                            <a href="/edit-todo/{{ $todo->id }}">Edit</a>
+                            <button type="submit">Done!</button>
+                        </form>
+                    </article>
+                @endforeach
+            @else
+                <span>No todos.</span>
+            @endif
+
             {{ $todos->links() }}
         </section>
     </main>
